@@ -44,7 +44,6 @@ O(n²)
 <img width="1920" height="1020" alt="Screenshot 2026-07-02 124732" src="https://github.com/user-attachments/assets/a9473b82-6a28-4bd4-b1aa-9b753cf8745f" />
 
 Passed all test cases successfully using Hash Map with O(n) time complexity.
-أكيد. هذا الجزء تضيفيه **تحت الـ Two Sum** بنفس نفس الستايل تبعك، لكن للـ **3Sum (Zero Sum Triples)**:
 
 ---
 
