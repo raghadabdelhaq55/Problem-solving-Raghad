@@ -102,3 +102,69 @@ O(n³)
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/395ea4a8-09c4-466e-8a6b-40dc2ef1fc12" />
 
 Passed all test cases successfully using Two Pointer technique with O(n²) time complexity.
+
+أكيد — هذا تكملة بنفس **نفس الأسلوب** اللي كتبتيه، للـ **Course Schedule** (آخر واحد حليناه). انسخي وحطيه تحتهم مباشرة:
+
+---
+
+## Graph + Topological Sort Technique (Course Schedule)
+
+For this problem, I used **Graph Traversal** with **Topological Sort** to check if completing all courses is possible.
+
+Each course can depend on another course before taking it, so I represented all courses as a graph.
+
+Instead of checking prerequisites repeatedly, I stored the dependencies for each course and counted how many requirements each course has.
+
+I started with the courses that have no prerequisites.
+
+Each time I completed one course, I updated the remaining dependent courses.
+
+If all courses can be processed successfully, then finishing all courses is possible.
+
+If there is a cycle between courses, then completing all courses becomes impossible.
+
+### Idea Behind the Solution
+
+```text
+create graph for all courses
+
+store prerequisites
+
+count dependencies for each course
+
+find courses with no prerequisites
+
+process courses one by one
+
+    remove completed course
+
+    update connected courses
+
+    if dependency becomes zero
+        add course to process
+
+if all courses are completed
+    return true
+
+otherwise
+    return false
+```
+
+Using graph traversal helps avoid checking prerequisites multiple times.
+
+Time Complexity:
+
+O(V + E)
+
+where:
+
+V = number of courses
+E = number of prerequisites
+
+instead of checking dependencies manually many times.
+
+## LeetCode Submission Result
+
+<img width="1909" height="848" alt="Screenshot 2026-07-02 135343" src="https://github.com/user-attachments/assets/bd883ab3-5d32-4467-8d06-392863d77d47" />
+
+Passed all test cases successfully using Graph Traversal and Topological Sort with O(V + E) time complexity.
